@@ -3,33 +3,36 @@
     <head>
         <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Gabrielly Dorada</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div>
-            <h1 id="titulo">Título do meu website</h1>
-            <h3>Subtitulo maroto</h3>
-            <p class="meu-paragrafo">A dona aranha subiu pela parede...</p>
-        </div>
-        <div>
-            <h2>Início da segunda seção</h2>
-            <p class="meu-paragrafo">...veio a chuva forte a derrubou!</p>
-            <button onclick="abreAlerta()">Clica em mim!</button>
+        <div class="wrapper">
+
+            <div class="left">
+                <img class="profile-picture" src="img/profile.jpg" width="200"/>
+                <h1 class="name">Gabrielly Dorada</h1>
+                <h4 class ="subtitle">Programming Student</h4>
+            </div>
+
+            <div class="right">
+                <p class="bio">
+                    Systems Analysis and Development student, backend developer, CLI enthusiast.
+                    Thanks for visiting my website.
+                </p>
+                <ul class="social-links">
+                    <li> 
+                        <a href="https://github.com/gabdorada">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/gabdorada/">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </body>
     <style> 
-        html {
-            background-color: beige;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .meu-paragrafo {
-            color: green;
-        }
-
-        #titulo {
-            color: blueviolet;
-        }
+       
     </style>
     <script>
         function abreAlerta() {

@@ -1,0 +1,90 @@
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Open Sans', sans-serif;
+  
+  background: linear-gradient(to bottom, rgba(231, 240, 245, 1) 0%, rgba(170, 221, 235, 1) 100%);
+}
+
+.wrapper {
+  max-width: 700px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.left, .right {
+  margin: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left {
+  align-items: center;
+}
+
+.right {
+  align-items: flex-start;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.name {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  margin: 0;
+}
+
+.subtitle {
+  font-weight: normal;
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.title {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.bio {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.social-links {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #4a27b8; 
+  font-weight: 600;
+}
+
+.social-links a:hover {
+  opacity: 0.8;
+}
