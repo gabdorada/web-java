@@ -33,7 +33,7 @@ Para tornar o processo de aprendizado transparente e documentado, **cada subpast
 
 ---
 
-## Diário de Bordo & Aprendizados
+## 🧠 Diário de Bordo & Aprendizados
 
 > *"Errar, ajustar e aprender faz parte do processo."*
 
