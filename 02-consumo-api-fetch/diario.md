@@ -47,7 +47,9 @@ Para proporcionar uma boa experiência de usuário totalmente em português, int
 
 Veja abaixo a aplicação realizando as chamadas das APIs e renderizando os dados na tela em tempo real:
 
-<img src="./demonstracao.gif" alt="Demonstração do App" width="100%">
+<div align="center">
+    <img src="./demonstracao.gif" alt="Demonstração do App">
+</div>
 
 ---
 ## Nota sobre o uso de IA e Aprendizado
