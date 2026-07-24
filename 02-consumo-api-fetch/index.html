@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatos & Fotos de Gatos</title>
+    <!-- 1. Link para carregar o seu CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Fatos & Fotos de Gatos</h1>
+
+        <div class="image-container">
+            <!-- 2. Aspas corrigidas em alt="gatinho" -->
+            <img id="foto-gato" src="" alt="gatinho">
+        </div>
+
+        <textarea id="mensagem" readonly placeholder="Clique no botão para carregar um fato..."></textarea>
+
+        <button onclick="pegaGato()">Pega um fato e foto!</button>
+    </main>
+
+<!-- 3. Removido o src="script.js" da tag script para o código funcionar -->
+<script> 
+    function pegaGato() {
+        let urlFato = 'https://catfact.ninja/fact';
+        let urlFoto = 'https://api.thecatapi.com/v1/images/search';
+
+        let caixaDeTexto = document.getElementById('mensagem');
+        let imagemGato = document.getElementById('foto-gato');
+
+        caixaDeTexto.value = "Carregando e traduzindo...";
+
+        // 1. Busca o fato sobre o gato 
+        fetch(urlFato) 
+            .then(resposta => resposta.json())
+            .then(json => {
+                let fatoEmIngles = json.fact;
+                let urlTradutor = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(fatoEmIngles)}&langpair=en|pt-BR`;
+
+                return fetch(urlTradutor);
+            })
+            .then(resposta => resposta.json())
+            .then(dadosTraduzidos => {
+                // --- AQUI ENTRA A LIMPEZA ---
+                let textoTraduzido = dadosTraduzidos.responseData.translatedText;
+
+                // Remove barras invertidas e aspas bugadas que a API de tradução envia
+                let textoLimpo = textoTraduzido
+                    .replaceAll('\\"', '"')
+                    .replaceAll('\\', '');
+
+                // Exibe o texto já limpinho na tela!
+                caixaDeTexto.value = textoLimpo;
+            })
+            .catch(erro => {
+                console.error('Erro:', erro);
+                caixaDeTexto.value = "Ops! Não foi possível carregar o fato.";
+            });
+
+        // 2. Busca a foto do gato
+        fetch(urlFoto)
+            .then(resposta => resposta.json())
+            .then(json => {
+                imagemGato.src = json[0].url;
+            })
+            .catch(erro => console.error('Erro ao buscar foto:', erro));
+    }
+</script>
+</body>
+</html>
