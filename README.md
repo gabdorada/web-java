@@ -31,5 +31,14 @@ Para tornar o processo de aprendizado transparente e documentado, **cada subpast
 
 ---
 
-## 💡 Sobre os Diários de Aprendizado
-O objetivo de manter um `diario.md` em cada projeto é documentar a evolução prática ao longo da trilha, facilitando a revisão de conceitos e demonstrando a construção de autonomia no aprendizado.
+---
+
+## Diário de Bordo & Aprendizados
+
+> *"Errar, ajustar e aprender faz parte do processo."*
+
+Este repositório registra meus passos práticos na transição do Front-end para o Backend com Java.
+
+- **Sobre o processo:** Cada commit aqui representa um momento de estudo, experimentos e, claro, alguns tropeços de configuração (como ajustar arquivos da IDE ou entender como o GitHub identifica as linguagens do projeto).
+- **A intenção:** Mantive todo o histórico de evolução e aprendizados registrados aqui mais para a minha própria reflexão no futuro do que para parecer perfeito. 
+- **O foco:** Aprender a base sólida de Java, organização de código e boas práticas de versionamento com Git.
